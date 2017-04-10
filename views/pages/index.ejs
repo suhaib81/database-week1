@@ -1,0 +1,252 @@
+<%
+var total = data.result1[0].total;
+var table2 = data.result2;
+var table3 = data.result3;
+var table4 = data.result4;
+var table5 = data.result5;
+var table6 = data.result6;
+%>
+  <%- contentFor('hero') %>
+    Todo List
+    <%- contentFor('body') %>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Find out how many todo items are on the list
+          </h3>
+        </div>
+        <div class="panel-body">
+          <%=total%>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Find all the todo items that are marked as done
+          </h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Done </th>
+                <th>Name </th>
+                <th>StatusId</th>
+                <th>Due</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% if (table2.length == 0){%>
+                <tr>
+                  <td colspan="5" align="center"> No Records</td>
+                </tr>
+                  <% }else{
+                  for(var i=0; i<table2.length; i++) {%>
+                  <tr>
+                    <td>
+                      <%= table2[i].Id %>
+                    </td>
+                    <td>
+                      <%= table2[i].Done %>
+                    </td>
+                    <td>
+                      <%= table2[i].Name %>
+                    </td>
+                    <td>
+                      <%= table2[i].StatusId %>
+                    </td>
+                    <td>
+                      <%= table2[i].Due %>
+                    </td>
+                  </tr>
+                  <%}}%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Find all the todo items that are not marked as done</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Done </th>
+                <th>Name </th>
+                <th>StatusId</th>
+                <th>Due</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% if (table3.length == 0){%>
+                <tr>
+                  <td colspan="5" align="center"> No Records</td>
+                </tr>
+                  <% }else{
+                  for(var i=0; i<table3.length; i++) {%>
+                  <tr>
+                    <td>
+                      <%= table3[i].Id %>
+                    </td>
+                    <td>
+                      <%= table3[i].Done %>
+                    </td>
+                    <td>
+                      <%= table3[i].Name %>
+                    </td>
+                    <td>
+                      <%= table3[i].StatusId %>
+                    </td>
+                    <td>
+                      <%= table3[i].Due %>
+                    </td>
+                  </tr>
+                  <%}}%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Get all the todo items, sorted with the most recent first</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Done </th>
+                <th>Name </th>
+                <th>StatusId</th>
+                <th>Due</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% if (table4.length == 0){%>
+                <tr>
+                  <td colspan="5" align="center"> No Records</td>
+                </tr>
+                  <% }else{
+                  for(var i=0; i<table4.length; i++) {%>
+                  <tr>
+                    <td>
+                      <%= table4[i].Id %>
+                    </td>
+                    <td>
+                      <%= table4[i].Done %>
+                    </td>
+                    <td>
+                      <%= table4[i].Name %>
+                    </td>
+                    <td>
+                      <%= table4[i].StatusId %>
+                    </td>
+                    <td>
+                      <%= table4[i].Due %>
+                    </td>
+                  </tr>
+                  <%}}%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Get the single most recently added todo item</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Done </th>
+                <th>Name </th>
+                <th>StatusId</th>
+                <th>Due</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (table5.length == 0){%>
+                <tr>
+                  <td colspan="5" align="center"> No Records</td>
+                </tr>
+                <% }else{
+                for(var i=0; i<table5.length; i++) {%>
+                  <tr>
+                    <td>
+                      <%= table5[i].Id %>
+                    </td>
+                    <td>
+                      <%= table5[i].Done %>
+                    </td>
+                    <td>
+                      <%= table5[i].Name %>
+                    </td>
+                    <td>
+                      <%= table5[i].StatusId %>
+                    </td>
+                    <td>
+                      <%= table5[i].Due %>
+                    </td>
+                  </tr>
+                  <%}}%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Get all todo items about 'databases'</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Done </th>
+                <th>Name </th>
+                <th>StatusId</th>
+                <th>Due</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (table6.length == 0){%>
+                <tr>
+                  <td colspan="5" align="center"> No Records</td>
+                </tr>
+                <% }else{
+                for(var i=0; i<table6.length; i++) {%>
+                  <tr>
+                    <td>
+                      <%= table6[i].Id %>
+                    </td>
+                    <td>
+                      <%= table6[i].Done %>
+                    </td>
+                    <td>
+                      <%= table6[i].Name %>
+                    </td>
+                    <td>
+                      <%= table6[i].StatusId %>
+                    </td>
+                    <td>
+                      <%= table6[i].Due %>
+                    </td>
+                  </tr>
+                  <%}}%>
+            </tbody>
+          </table>
+        </div>
+      </div>
